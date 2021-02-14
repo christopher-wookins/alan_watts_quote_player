@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+ <meta charset="UTF-8"> 
+ <head>
+
+ 	<!-- Bootstrap CSS -->
+ 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+ 	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+	<title> Alan Watts Quote  </title>
+
+	<script> 
+		function play(str) {
+
+		
+			
+			if(str === "Q" || str === "q" ) {
+				document.getElementById('display').innerText = "I believe that if we are honest with ourselves";
+			} else if (str === "W" || str === "w") {
+				document.getElementById('display').innerText = "That the most fascinating problem in the world";
+			} else if (str === "E" || str === "e") {
+				document.getElementById('display').innerText = "Is who am I?";
+			} else if (str === "A" || str === "a") {
+				document.getElementById('display').innerText = "What do you mean?";
+			} else if (str === "S" || str === "s") {
+				document.getElementById('display').innerText = "What do you feel?";
+			} else if (str === "D" || str === "d") {
+				document.getElementById('display').innerText = "When you say the word I";
+			} else if (str === "Z" || str === "z") {
+				document.getElementById('display').innerText = "I, myself";
+			} else if (str === "X" || str === "x") {
+				document.getElementById('display').innerText = "I don't think, there can be any more fascinating preocupation than that.";
+			} else if (str === "C" || str === "c") {
+				document.getElementById('display').innerText = "Because it's so mysterious, it's so elusive.";
+			}
+
+		
+
+			var audio = document.getElementById(str);
+			audio.play();
+		}
+
+		window.document.onkeyup = function(event) {
+			let keyStroke = event.key
+			if(keyStroke === "Q" || keyStroke === "q" ) {
+				play("Q");
+			} else if (keyStroke === "W" || keyStroke === "w") {
+				play("W")
+			} else if (keyStroke === "E" || keyStroke === "e") {
+				play("E")
+			} else if (keyStroke === "A" || keyStroke === "a") {
+				play("A")
+			} else if (keyStroke === "S" || keyStroke === "s") {
+				play("S")
+			} else if (keyStroke === "D" || keyStroke === "d") {
+				play("D")
+			} else if (keyStroke === "Z" || keyStroke === "z") {
+				play("Z")
+			} else if (keyStroke === "X" || keyStroke === "x") {
+				play("X")
+			} else if (keyStroke === "C" || keyStroke === "c") {
+				play("C")
+			}
+		}
+	</script>
+	
+
+ </head>
+
+<body>	
+
+
+	<div id="drum-machine">
+		<h1 class="text-center text-success"> Alan Watts Quote Player </h1>
+
+		<div class="card"> 
+			<div class="card-body"> 
+				<div class="text-center my-3" id="display"> Init </div>
+			</div>
+		</div>
+
+		<div class="text-center py-3">
+
+		<div class="row my-3">
+		  <div class="col-md-2"> </div>
+		  <div class="col-md-8">
+			<button class="drum-pad btn btn-dark btn-block" id="drum-0" onClick="play('Q')">Q
+				<audio src="./clips/1.wav" class="clip" id="Q">
+			</button>
+			<button class="drum-pad btn btn-info btn-block" id="drum-1" onClick="play('W')">W
+				<audio src="./clips/2.wav" class="clip" id="W">
+			</button>
+			<button class="drum-pad btn btn-success btn-block" id="drum-2" onClick="play('E')">E
+				<audio src="./clips/3.wav" class="clip" id="E">
+			</button>
+		</div>
+		<div class="col-md-2"> </div>
+		</div>
+		<div class="row my-3">
+		 <div class="col-md-2"> </div>
+		 <div class="col-md-8">	
+			<button class="drum-pad btn btn-dark btn-block" id="drum-3" onClick="play('A')">A
+				<audio src="./clips/4.wav" class="clip" id="A">
+			</button>
+			<button class="drum-pad btn btn-info btn-block" id="drum-4" onClick="play('S')">S
+				<audio src="./clips/5.wav" class="clip" id="S">
+			</button>
+			<button class="drum-pad btn btn-success btn-block" id="drum-5" onClick="play('D')">D
+				<audio src="./clips/6.wav" class="clip" id="D">
+			</button>
+		</div>
+		<div class="col-md-2"> </div>
+		</div>	
+		<div class="row my-3">
+		 <div class="col-md-2"> </div>
+		 <div class="col-md-8">	
+			<button class="drum-pad btn btn-dark btn-block" id="drum-6" onClick="play('Z')">Z
+				<audio src="./clips/7.wav" class="clip" id="Z">
+			</button>
+			<button class="drum-pad btn btn-info btn-block" id="drum-7" onClick="play('X')">X
+				<audio src="./clips/8.wav" class="clip" id="X">
+			</button>
+			<button class="drum-pad btn btn-success btn-block" id="drum-8" onClick="play('C')">C
+				<audio src="./clips/9.wav" class="clip" id="C">
+			</button>
+		</div>
+		<div class="col-md-2"> </div>
+		</div>	
+		</div>
+		</div>
+
+	</div>	
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"> </script>		 
+
+	</body>
+
+
+
+</html>
